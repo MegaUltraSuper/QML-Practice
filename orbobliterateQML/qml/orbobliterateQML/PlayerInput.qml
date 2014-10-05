@@ -14,7 +14,15 @@ Rectangle {
             color:"#88CCEEDD"
             font.family: "Georgia"
             font.pixelSize: parent.height/15*.8
-            text:"Player Name:"
+            text: removeSmallText("Player Name:")
+            function removeSmallText(text){
+                if (parent.width == 0){
+                    return "";
+                }
+                else{
+                    return text;
+                }
+            }
         }
         Rectangle{
             width:parent.width*.5
@@ -23,12 +31,37 @@ Rectangle {
             color:"#AA708075"
             border.width: 1
             border.color: "#AAAAAA"
+            Rectangle{
+                id: filter
+                anchors.fill: parent
+                color: "#00205030"
+                z:3
+            }
+            MouseArea{
+                anchors.fill: parent
+                hoverEnabled: true
+                onEntered: {
+                    filter.color = "#50203530";
+                    filter.z = 3;
+                }
+                onExited: {
+                    filter.color = "#00205030";
+                }
+            }
             TextEdit{
                 z:1
                 color:"#88CCEEDD"
                 font.family: "Georgia"
                 font.pixelSize: parent.height*.8
-                text:"Player One"
+                text: removeSmallText("Player 1")
+                function removeSmallText(text){
+                    if (parent.width == 0){
+                        return "";
+                    }
+                    else{
+                        return text;
+                    }
+                }
             }
         }
         Rectangle{
@@ -42,7 +75,15 @@ Rectangle {
             color:"#88CCEEDD"
             font.family: "Georgia"
             font.pixelSize: parent.height/15*.8
-            text:"Host Multiplayer Match?"
+            text: removeSmallText("Host Multiplayer Match?")
+            function removeSmallText(text){
+                if (parent.width == 0){
+                    return "";
+                }
+                else{
+                    return text;
+                }
+            }
         }
         Checkbox{
             width:parent.width*.5

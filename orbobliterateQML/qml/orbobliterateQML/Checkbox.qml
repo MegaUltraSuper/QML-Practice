@@ -48,6 +48,14 @@ Row{
         color:"#88CCEEDD"
         font.family: "Georgia"
         font.pixelSize: parent.height*.8
-        text: "Yes, I want to be host."
+        text: removeSmallText("Yes, I would like to be host.")
+        function removeSmallText(text){
+            if (parent.width == 0){
+                return "";
+            }
+            else{
+                return text;
+            }
+        }
     }
 }

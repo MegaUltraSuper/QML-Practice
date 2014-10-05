@@ -1,26 +1,32 @@
 import QtQuick 1.1
 
 
-Rectangle {
-    width: 600
-    height: 400
-    RadialGrad{
+Rectangle{
+    Loader { id: pageLoader }
+    id:screen
+    width:640
+    height:480
+    state: "menu"
+    Menu{
+        id:menu
+    }
+    HowToPlay{
+        id:howtoplay
+        color:"transparent"
+    }
 
-    }
-    Title{
-        width:parent.width
-        height:parent.height
-    }
-    ButtonList{
-        width:parent.width/3
-        height:parent.height/4*3
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-    }
-    PlayerInput{
-        width:parent.width/3*2
-        height:parent.height/4*3
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-    }
+    states: [
+        State {
+            name: "menu"
+            PropertyChanges {target: menu; width:parent.width; height:parent.height;}
+            PropertyChanges {target: howtoplay; width:0; height:0;}
+            PropertyChanges {target: howtoplay; color:"transparent"}
+        },
+        State {
+            name: "howtoplay"
+            PropertyChanges {target: menu; width:0; height:0;}
+            PropertyChanges {target: howtoplay; width:parent.width; height:parent.height;}
+            PropertyChanges {target: howtoplay; color:"#AABBDDCC"}
+        }
+    ]
 }

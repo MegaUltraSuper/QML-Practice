@@ -9,6 +9,10 @@ Column{
             height:parent.height
             source:"images/NewGame.png"
         }
+        MouseArea {
+           anchors.fill: parent
+           onClicked: pageLoader.source = "Game.qml"
+        }
     }
     MenuButton{
         id:multiplayer
@@ -41,6 +45,12 @@ Column{
             width:parent.width
             height:parent.height
             source:"images/HowtoPlay.png"
+        }
+        MouseArea{
+            anchors.fill: parent
+            onClicked: {
+                screen.state="howtoplay"
+            }
         }
     }
 }
