@@ -1,8 +1,20 @@
 import QtQuick 1.1
 
 Rectangle {
-    width: 800
-    height: 500
+    id:game
+    width: screen.width
+    height:screen.height
     color: "black"
+    Player{
+        id:player
+        width: parent.width/8
+        height: parent.height/10
+        x: parent.width/2-width/2
+        y: parent.height-height
+    }
+    KeyHandle{
+
+    }
+
 
 }

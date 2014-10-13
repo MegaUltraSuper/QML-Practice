@@ -11,7 +11,11 @@ Column{
         }
         MouseArea {
            anchors.fill: parent
-           onClicked: pageLoader.source = "Game.qml"
+           onClicked: {
+               var component = Qt.createComponent("Game.qml");
+               win = component.createObject(screen);
+               win.show();
+           }
         }
     }
     MenuButton{

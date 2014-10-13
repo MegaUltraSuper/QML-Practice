@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/bullet.gif</file>
+        <file>images/check.png</file>
+        <file>images/demoLook.gif</file>
+        <file>images/greenOrb.gif</file>
+        <file>images/HowtoPlay.png</file>
+        <file>images/Leaderboard.png</file>
+        <file>images/LoadGame.png</file>
+        <file>images/Multiplayer.png</file>
+        <file>images/NewGame.png</file>
+        <file>images/orangeOrb.gif</file>
+        <file>images/orb1.png</file>
+        <file>images/orb2.png</file>
+        <file>images/orb3.png</file>
+        <file>images/orb4.png</file>
+        <file>images/orb5.png</file>
+        <file>images/orb6.png</file>
+        <file>images/orb7.png</file>
+        <file>images/orb8.png</file>
+        <file>images/redOrb.gif</file>
+        <file>images/ship.gif</file>
+        <file>images/ship.png</file>
+        <file>images/title.png</file>
+        <file>images/title2.png</file>
+    </qresource>
+</RCC>

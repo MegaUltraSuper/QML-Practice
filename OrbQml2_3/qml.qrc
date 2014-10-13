@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Menu.qml</file>
+        <file>RadialGrad.qml</file>
+        <file>PlayerInput.qml</file>
+        <file>Title.qml</file>
+        <file>ButtonList.qml</file>
+        <file>Checkbox.qml</file>
+        <file>Game.qml</file>
+        <file>HowToPlay.qml</file>
+        <file>KeyHandle.qml</file>
+        <file>Laser.qml</file>
+        <file>MenuButton.qml</file>
+        <file>Player.qml</file>
+        <file>SinglePlayer.qml</file>
+    </qresource>
+</RCC>
